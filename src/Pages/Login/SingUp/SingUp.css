@@ -1,0 +1,27 @@
+
+
+.img-container{
+    width: 50%;
+    margin: 0 auto;
+}
+.img-container img{
+    width: 100%;
+    margin: 0 auto;
+}
+
+
+.form-container{
+    width: 50%;
+    margin: 0 auto;
+}
+.form-container input{
+    display: block;
+    width: 50%;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    height: 30px;
+    padding-left: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid lightgray;
+}

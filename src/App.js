@@ -1,23 +1,30 @@
-import logo from './logo.svg';
 import './App.css';
+import Header from './Shared/Header/Header';
+import Footer from './Shared/Footer/Footer';
+import { Route, Routes } from 'react-router-dom';
+import Home from './Pages/Home/Home/Home';
+import Login from './Pages/Login/Login/Login';
+import SingUp from './Pages/Login/SingUp/SingUp';
+import Brackfast from './Shared/Meal/Brackfast/Brackfast';
+import Lunch from './Shared/Meal/Lunch/Lunch';
+import Dinner from './Shared/Meal/Dinner/Dinner';
+import Orders from './Pages/Home/Orders/Orders';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Header></Header>
+      <Routes>
+        <Route path='/' element={<Home></Home>}></Route>
+        <Route path='/home' element={<Home></Home>}></Route>
+        <Route path='/orders' element={<Orders></Orders>}></Route>
+        <Route path='/login' element={<Login></Login>}></Route>
+        <Route path='/singup' element={<SingUp></SingUp>}></Route>
+        <Route path='/brackfast' element={<Brackfast></Brackfast>}></Route>
+        <Route path='/lunch' element={<Lunch></Lunch>}></Route>
+        <Route path='/dinner' element={<Dinner></Dinner>}></Route>
+      </Routes>
+      <Footer></Footer>
     </div>
   );
 }
